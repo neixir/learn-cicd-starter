@@ -14,7 +14,7 @@ func TestGetAPIKey(t *testing.T) {
 		want        string
 		wantError   bool
 	}{
-		"ok":               {headerKey: "Authorization", headerValue: "ApiKey 123456789", want: "123456789_", wantError: false},
+		"ok":               {headerKey: "Authorization", headerValue: "ApiKey 123456789", want: "123456789", wantError: false},
 		"malformed header": {headerKey: "Authorization", headerValue: "Token 123456789", want: "", wantError: true},
 		"no auth header":   {headerKey: "Nope", headerValue: "", want: "", wantError: true},
 	}
