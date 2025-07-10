@@ -1,4 +1,4 @@
-![badge](https://github.com/nexir/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
+![badge](https://github.com/neixir/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 # learn-cicd-starter (Notely)
 
