@@ -29,8 +29,8 @@ jobs:
       - name: Add Go bin to PATH
         run: echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
-      # - name: Check out code
-      #   uses: actions/checkout@v4
+      - name: Check out code
+        uses: actions/checkout@v4
 
       - name: Formatting
         run: test -z $(go fmt ./...)
