@@ -19,11 +19,11 @@ jobs:
       - name: Set up the app
         run: scripts/buildprod.sh
 
-  gcp:
-    name: GCP
-    runs-on: ubuntu-latest
+#   gcp:
+#     name: GCP
+#     runs-on: ubuntu-latest
 
-    steps:
+#     steps:
       - id: 'auth'
         uses: 'google-github-actions/auth@v2'
         with:
