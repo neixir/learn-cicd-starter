@@ -26,11 +26,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Style
+      - name: Add Go bin to PATH
+        run: echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      # - name: Check out code
+      #   uses: actions/checkout@v4
+
+      - name: Formatting
         run: test -z $(go fmt ./...)
       
       - name: Install staticcheck
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
       - name: Run staticcheck
-        run: staticcheck ./...
+        run: $GOPATH/bin/staticcheck ./...
